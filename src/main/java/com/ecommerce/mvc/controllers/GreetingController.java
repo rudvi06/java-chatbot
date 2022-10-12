@@ -25,7 +25,7 @@ public class GreetingController {
     }
 
     @PostMapping("/loginProcess")
-    public String login(@ModelAttribute("credentials") Credentials credentials){
+    public String login(@ModelAttribute("credentials")Credentials credentials){
         Customer customer = customerService.findByEmailId(credentials.getUsername());
         if(credentials.getPassword() == customer.getPassword())
             System.out.println("Login successful");
