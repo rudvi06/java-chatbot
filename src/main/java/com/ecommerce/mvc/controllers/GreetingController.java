@@ -33,7 +33,7 @@ public class GreetingController {
     @PostMapping("/signup")
     public String signup(@ModelAttribute("credentials") Credentials credentials, BindingResult result, Customer customer){
         if (result.hasErrors()) {
-            return "home";
+            return "error";
         }
         customer.setEmailId(credentials.getUsername());
         customer.setPassword(credentials.getPassword());
@@ -44,7 +44,7 @@ public class GreetingController {
     @PostMapping("/loginProcess")
     public String login(@ModelAttribute("credentials") Credentials credentials, BindingResult result){
         if (result.hasErrors()) {
-            return "home";
+            return "error";
         }
         Customer customer = customerService.findByEmailId(credentials.getUsername());
         if(credentials.getPassword() == customer.getPassword())
