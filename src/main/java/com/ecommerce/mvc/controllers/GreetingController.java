@@ -5,6 +5,7 @@ import com.ecommerce.mvc.models.Customer;
 import com.ecommerce.mvc.services.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -26,12 +27,13 @@ public class GreetingController {
     }
 
     @GetMapping("/signup")
-    public String signup(){
-       return "login";
+    public String signup(Model model){
+        model.addAttribute("credentials", new Credentials());
+        return "login";
     }
 
     @PostMapping("/signup")
-    public String signup(@ModelAttribute("credentials") Credentials credentials, BindingResult result, Customer customer){
+    public String signup( @ModelAttribute("credentials") Credentials credentials, BindingResult result, Customer customer){
         if (result.hasErrors()) {
             return "error";
         }
