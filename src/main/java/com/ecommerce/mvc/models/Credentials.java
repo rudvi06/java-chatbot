@@ -3,10 +3,9 @@ package com.ecommerce.mvc.models;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
+
 public class Credentials {
 
-    @Id
     private String username;
     private String password;
 
