@@ -27,7 +27,7 @@ public class GreetingController {
 
     @GetMapping("/signup")
     public String signup(){
-       return "signup";
+       return "login";
     }
 
     @PostMapping("/signup")
