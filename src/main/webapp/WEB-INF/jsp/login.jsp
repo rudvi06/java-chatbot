@@ -9,8 +9,8 @@
           action="/loginProcess" modelAttribute="credentials">
              <table>
                 <tr>
-                    <td><form:label path="emailId">Email ID</form:label></td>
-                    <td><form:input path="emailId"/></td>
+                    <td><form:label path="username">Email ID</form:label></td>
+                    <td><form:input path="username"/></td>
                 </tr>
                 <tr>
                     <td><form:label path="password">Password</form:label></td>
