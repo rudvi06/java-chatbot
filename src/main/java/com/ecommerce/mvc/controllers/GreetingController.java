@@ -21,15 +21,27 @@ public class GreetingController {
         return "home";
     }
 
-    @GetMapping("/loginProcess")
-    public String login(){
+    @GetMapping("/login")
+    public String login(Model model){
+        model.addAttribute("credentials", new Credentials());
         return "login";
+    }
+
+    @PostMapping("/login")
+    public String login(@ModelAttribute("credentials") Credentials credentials, BindingResult result){
+        if (result.hasErrors()) {
+            return "error";
+        }
+        Customer customer = customerService.findByEmailId(credentials.getUsername());
+        if(credentials.getPassword() == customer.getPassword())
+            System.out.println("Login successful");
+        return "home";
     }
 
     @GetMapping("/signup")
     public String signup(Model model){
         model.addAttribute("credentials", new Credentials());
-        return "login";
+        return "signup";
     }
 
     @PostMapping("/signup")
@@ -43,14 +55,4 @@ public class GreetingController {
         return "home";
     }
 
-    @PostMapping("/loginProcess")
-    public String login(@ModelAttribute("credentials") Credentials credentials, BindingResult result){
-        if (result.hasErrors()) {
-            return "error";
-        }
-        Customer customer = customerService.findByEmailId(credentials.getUsername());
-        if(credentials.getPassword() == customer.getPassword())
-            System.out.println("Login successful");
-        return "home";
-    }
 }
