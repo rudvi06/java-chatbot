@@ -18,7 +18,7 @@ public class GreetingController {
     private CustomerService customerService;
 
 
-    @GetMapping("/")
+    @GetMapping("")
     public String home(){
         return "ecommerce";
     }
