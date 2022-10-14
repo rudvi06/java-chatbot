@@ -11,10 +11,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Controller
 public class GreetingController {
     @Autowired
     private CustomerService customerService;
+
 
     @GetMapping("/home")
     public String home(){
@@ -53,6 +56,12 @@ public class GreetingController {
         customer.setPassword(credentials.getPassword());
         customerService.saveAndFlush(customer);
         return "home";
+    }
+
+    @GetMapping("/display")
+    public List<Customer> display(){
+        List<Customer> customers = customerService.findAll();
+        return customers;
     }
 
 }
