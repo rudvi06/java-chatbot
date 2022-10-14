@@ -18,9 +18,9 @@ public class GreetingController {
     private CustomerService customerService;
 
 
-    @GetMapping("/home")
+    @GetMapping("/")
     public String home(){
-        return "home";
+        return "ecommerce";
     }
 
     @GetMapping("/login")
@@ -37,7 +37,7 @@ public class GreetingController {
         Customer customer = customerService.findByEmailId(credentials.getUsername());
         if(credentials.getPassword() == customer.getPassword())
             System.out.println("Login successful");
-        return "home";
+        return "ecommerce";
     }
 
     @GetMapping("/signup")
@@ -54,7 +54,7 @@ public class GreetingController {
         customer.setEmailId(credentials.getUsername());
         customer.setPassword(credentials.getPassword());
         customerService.saveAndFlush(customer);
-        return "home";
+        return "ecommerce";
     }
 
     @GetMapping("/display")
