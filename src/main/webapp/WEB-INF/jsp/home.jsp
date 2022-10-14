@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Home</title>
+    <title>Learn and Develop</title>
 </head>
 <body>
-<h1>Hello</h1>
+<h1>Welcome</h1>
+<h2>to my project page...</h2>
+<p>Following are the links to my project,<br> Note: They are under construction!</p>
+<a href="/ecommerce">Ecommerce</a>
 </body>
 </html>
