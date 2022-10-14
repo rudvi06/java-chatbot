@@ -5,7 +5,7 @@
    </head>
     <body>
         <h3>Welcome, Enter The details to sign up</h3>
-        <form:form method="POST" action="/signup" modelAttribute="credentials">
+        <form:form method="POST" action="ecommerce/signup" modelAttribute="credentials">
              <table>
                 <tr>
                     <td><form:label path="username">Email ID</form:label></td>
