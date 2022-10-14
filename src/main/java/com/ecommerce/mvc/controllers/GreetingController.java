@@ -10,6 +10,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -59,6 +60,7 @@ public class GreetingController {
     }
 
     @GetMapping("/display")
+    @ResponseBody
     public List<Customer> display(){
         List<Customer> customers = customerService.findAll();
         return customers;
