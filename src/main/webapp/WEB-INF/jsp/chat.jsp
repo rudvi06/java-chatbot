@@ -183,9 +183,7 @@ background: #f4f7f9;
 </style>
     </head>
     <body>
-        <div id="center-text">
-            <h2>ChatBox </h2>
-        </div>
+  
         <div id="chat-circle" class="btn btn-raised">
         <div id="chat-overlay"></div>
 
