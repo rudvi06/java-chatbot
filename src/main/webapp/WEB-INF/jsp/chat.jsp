@@ -11,11 +11,6 @@
 <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
 <style type="text/css">
 
-/*
-  html, body {
-  background: #efefef;
-  height:100%;}
-*/
 .btn#my-btn {
      background: white;
     padding-top: 13px;
@@ -33,17 +28,6 @@
     height: 100%;
     border-radius: 50%;
     display: none;}
-
-/*
-#center-text {
-  display: flex;
-  flex: 1;
-  flex-direction:column;
-  justify-content: center;
-  align-items: center;
-  height:100%;
-}
-*/
 
 #chat-circle {
   position: fixed;
