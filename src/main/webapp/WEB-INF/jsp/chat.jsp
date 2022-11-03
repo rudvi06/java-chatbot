@@ -10,10 +10,12 @@
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.css'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
 <style type="text/css">
-html, body {
+
+/*
+  html, body {
   background: #efefef;
   height:100%;}
-
+*/
 .btn#my-btn {
      background: white;
     padding-top: 13px;
@@ -31,6 +33,8 @@ html, body {
     height: 100%;
     border-radius: 50%;
     display: none;}
+
+/*
 #center-text {
   display: flex;
   flex: 1;
@@ -38,8 +42,9 @@ html, body {
   justify-content: center;
   align-items: center;
   height:100%;
-
 }
+*/
+
 #chat-circle {
   position: fixed;
   bottom: 50px;
@@ -53,8 +58,6 @@ html, body {
   cursor: pointer;
   box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.6), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
-
-
 
 .chat-box {
   display:none;
@@ -183,7 +186,7 @@ background: #f4f7f9;
 </style>
     </head>
     <body>
-  
+
         <div id="chat-circle" class="btn btn-raised">
         <div id="chat-overlay"></div>
 
