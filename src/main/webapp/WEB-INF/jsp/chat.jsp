@@ -19,15 +19,7 @@
     padding-right: 40px;
     padding-left: 40px;
     color: #5865C3;}
-#chat-overlay {
-    background: rgba(255,255,255,0.1);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    display: none;}
+
 
 #chat-circle {
   position: fixed;
