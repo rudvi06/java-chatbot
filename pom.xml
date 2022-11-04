@@ -21,7 +21,7 @@
 	<repositories>
 		<repository>
 			<id>program-ab-repo</id>
-			<url>https://jcenter.bintray.com/</url>
+			<url>https://mvnrepository.com/</url>
 		</repository>
 	</repositories>
 
