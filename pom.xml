@@ -18,6 +18,13 @@
 	</properties>
 	-->
 
+	<repositories>
+		<repository>
+			<id>program-ab-repo</id>
+			<url>https://jcenter.bintray.com/</url>
+		</repository>
+	</repositories>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -45,11 +52,9 @@
 		</dependency>
 
 		<dependency>
-			<artifactId>com.google</artifactId>
-			<groupId>Ab</groupId>
-			<version>0.0.4.3</version>
-			<scope>system</scope>
-			<systemPath>${basedir}/src/main/resources/lib/Ab.jar</systemPath>
+			<groupId>org.goldrenard</groupId>
+			<artifactId>ab</artifactId>
+			<version>1.0.3</version>
 		</dependency>
 
 	</dependencies>
