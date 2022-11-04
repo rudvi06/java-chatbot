@@ -18,18 +18,14 @@ public class ChatBotService {
             Bot bot = new Bot(botname, path);
 
             Chat chatSession = new Chat(bot);
-            String textLine = text;
+            String textLine = "";
 
             while (true) {
-                //System.out.print("Human : ");
+                System.out.print("Human : ");
                 //textLine = IOUtils.readInputTextLine();
+                textLine=text;
                 if ((textLine == null) || (textLine.length() < 1))
                     textLine = MagicStrings.null_input;
-                //if (textLine.equals("q")) {
-                  //  System.exit(0);}
-                    // else if (textLine.equals("wq")) {
-                    //bot.writeQuit();
-                    //System.exit(0);}
                 else {
                     String request = textLine;
                     String response = chatSession.multisentenceRespond(request);
@@ -50,7 +46,7 @@ public class ChatBotService {
         String path = currDir.getAbsolutePath();
         path = path.substring(0, path.length() - 2);
         System.out.println(path);
-        String resourcesPath = path + "/"+ "src" + File.separator + "main" + File.separator + "resources";
+        String resourcesPath = path + File.separator+ "src" + File.separator + "main" + File.separator + "resources";
         return resourcesPath;
     }
 
