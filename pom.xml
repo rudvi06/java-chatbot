@@ -20,8 +20,9 @@
 
 	<repositories>
 		<repository>
-			<id>program-ab-repo</id>
-			<url>https://mvnrepository.com/</url>
+			<id>jcenter</id>
+			<name>jcenter-bintray</name>
+			<url>http://jcenter.bintray.com</url>
 		</repository>
 	</repositories>
 
@@ -53,8 +54,8 @@
 
 		<dependency>
 			<groupId>org.goldrenard</groupId>
-			<artifactId>ab</artifactId>
-			<version>1.0.3</version>
+			<artifactId>jb</artifactId>
+			<version>1.0.13</version>
 		</dependency>
 
 	</dependencies>
