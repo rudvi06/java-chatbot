@@ -217,7 +217,7 @@ background: #f4f7f9;
 
                 $.ajax({
                     type: "POST",
-                    url: "/ask",
+                    url: "/",
                     data: $(this).serialize(),
                     success: function(response) {
                         $('#messageText').val('');
@@ -251,7 +251,7 @@ background: #f4f7f9;
 
               $.ajax({
                   type: "POST",
-                  url: "/ask",
+                  url: "/",
                   data: {messageText : message } ,
                   success: function(response) {
                       var answer = response.answer;
