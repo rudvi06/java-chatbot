@@ -59,8 +59,8 @@
 
 		<dependency>
 			<groupId>org.goldrenard</groupId>
-			<artifactId>jb</artifactId>
-			<version>1.0.13</version>
+			<artifactId>ab</artifactId>
+			<version>1.0.7</version>
 		</dependency>
 
 	</dependencies>
