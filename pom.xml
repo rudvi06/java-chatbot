@@ -22,7 +22,12 @@
 		<repository>
 			<id>jcenter</id>
 			<name>jcenter-bintray</name>
-			<url>https://mvnrepository.com</url>
+			<url>https://jcenter.bintray.com</url>
+		</repository>
+		<repository>
+			<id>bippo</id>
+			<name>nexus-bippo</name>
+			<url>https://nexus.bippo.co.id/nexus/content/groups/public</url>
 		</repository>
 	</repositories>
 
