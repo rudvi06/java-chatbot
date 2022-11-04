@@ -22,7 +22,7 @@
 		<repository>
 			<id>jcenter</id>
 			<name>jcenter-bintray</name>
-			<url>https://mvnrepository.com/artifact/org.goldrenard/jb</url>
+			<url>https://mvnrepository.com</url>
 		</repository>
 	</repositories>
 
