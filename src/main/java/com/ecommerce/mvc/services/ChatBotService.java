@@ -2,9 +2,11 @@ package com.ecommerce.mvc.services;
 
 import org.alicebot.ab.*;
 import org.alicebot.ab.utils.IOUtils;
+import org.springframework.stereotype.Service;
 
 import java.io.File;
 
+@Service
 public class ChatBotService {
 
     public static void chatBot(String text) {
