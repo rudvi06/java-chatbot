@@ -23,6 +23,7 @@
 			<id>jcenter</id>
 			<url>https://jcenter.bintray.com</url>
 		</repository>
+		
 		<repository>
 			<id>bippo</id>
 			<name>nexus-bippo</name>
@@ -31,14 +32,17 @@
 	</repositories>
 
 	<dependencies>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -60,6 +64,12 @@
 			<groupId>org.goldrenard</groupId>
 			<artifactId>ab</artifactId>
 			<version>1.0.7</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.reduls.sanmoku</groupId>
+			<artifactId>sanmoku</artifactId>
+			<version>0.0.5</version>
 		</dependency>
 
 	</dependencies>
