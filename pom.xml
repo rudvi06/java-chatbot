@@ -23,6 +23,11 @@
 			<id>mvnrepository</id>
 			<url>https://mvnrepository.com/artifact</url>
 		</repository>
+		<repository>
+			<id>jcenter</id>
+			<url>https://jcenter.bintray.com</url>
+		</repository>
+		
 	</repositories>
 
 	<dependencies>
