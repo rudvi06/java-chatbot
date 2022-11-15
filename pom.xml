@@ -18,18 +18,6 @@
 	</properties>
 	-->
 
-	<repositories>
-		<repository>
-			<id>mvnrepository</id>
-			<url>https://mvnrepository.com/artifact</url>
-		</repository>
-		<repository>
-			<id>jcenter</id>
-			<url>https://jcenter.bintray.com</url>
-		</repository>
-		
-	</repositories>
-
 	<dependencies>
 
 		<dependency>
@@ -59,12 +47,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>org.goldrenard</groupId>
-			<artifactId>ab</artifactId>
-			<version>1.0.7</version>
-		</dependency>
-
 	</dependencies>
 
 	<build>
@@ -73,6 +55,29 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<configuration>
+					<artifactId>com.google</artifactId>
+					<groupId>Ab</groupId>
+					<version>0.0.4.3</version>
+					<packaging>jar</packaging>
+					<file>${basedir}/src/main/resources/lib/Ab.jar</file>
+					<generatePom>true</generatePom>
+				</configuration>
+				<executions>
+					<execution>
+						<id>install-jar-lib</id>
+						<goals>
+							<goal>install-file</goal>
+						</goals>
+						<phase>validate</phase>
+					</execution>
+				</executions>
+			</plugin>
+
 		</plugins>
 	</build>
 
