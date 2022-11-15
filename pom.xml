@@ -20,14 +20,8 @@
 
 	<repositories>
 		<repository>
-			<id>jcenter</id>
-			<url>https://jcenter.bintray.com</url>
-		</repository>
-		
-		<repository>
-			<id>bippo</id>
-			<name>nexus-bippo</name>
-			<url>https://nexus.bippo.co.id/nexus/content/groups/public/</url>
+			<id>mvnrepository</id>
+			<url>https://mvnrepository.com/artifact/org.goldrenard/ab</url>
 		</repository>
 	</repositories>
 
@@ -64,12 +58,6 @@
 			<groupId>org.goldrenard</groupId>
 			<artifactId>ab</artifactId>
 			<version>1.0.7</version>
-		</dependency>
-
-		<dependency>
-			<groupId>net.reduls.sanmoku</groupId>
-			<artifactId>sanmoku</artifactId>
-			<version>0.0.5</version>
 		</dependency>
 
 	</dependencies>
