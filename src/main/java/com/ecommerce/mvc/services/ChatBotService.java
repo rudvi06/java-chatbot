@@ -1,6 +1,7 @@
 package com.ecommerce.mvc.services;
 
 import org.alicebot.ab.*;
+import org.alicebot.ab.configuration.BotConfiguration;
 import org.alicebot.ab.utils.IOUtils;
 import org.springframework.stereotype.Service;
 
@@ -12,20 +13,28 @@ public class ChatBotService {
     public static void chatBot(String text) {
         try {
 
-            String botname="test";
-            String path=getResourcesPath();
-            MagicBooleans.trace_mode = false;
-            Bot bot = new Bot(botname, path);
+            Bot bot = new Bot(BotConfiguration.builder()
+                    .name("test")
+                    .path(getResourcesPath())
+                    .build());
 
             Chat chatSession = new Chat(bot);
+
+            //String botname = "test";
+            //String path = getResourcesPath();
+            //MagicBooleans.trace_mode = false;
+            //Bot bot = new Bot(botname, path);
+
+            //chatSession = new Chat(bot);
             String textLine = "";
 
             while (true) {
                 System.out.print("Human : ");
                 //textLine = IOUtils.readInputTextLine();
-                textLine=text;
+                textLine = text;
                 if ((textLine == null) || (textLine.length() < 1))
-                    textLine = MagicStrings.null_input;
+                    //textLine = MagicStrings.null_input;
+                    textLine ="";
                 else {
                     String request = textLine;
                     String response = chatSession.multisentenceRespond(request);
