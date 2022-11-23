@@ -18,7 +18,20 @@
 	</properties>
 	-->
 
+	<repositories>
+		<repository>
+			<id>JCenter</id>
+			<url>https://jcenter.bintray.com</url>
+		</repository>
+	</repositories>
+
 	<dependencies>
+
+		<dependency>
+			<groupId>org.goldrenard</groupId>
+			<artifactId>ab</artifactId>
+			<version>1.0.7</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -47,27 +60,13 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>org.goldrenard</groupId>
-			<artifactId>ab</artifactId>
-			<version>1.0.7</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>net.reduls.sanmoku</groupId>
-			<artifactId>sanmoku</artifactId>
-			<version>0.0.5</version>
-		</dependency>
-
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-
 		</plugins>
 	</build>
 

@@ -6,26 +6,26 @@ import org.alicebot.ab.utils.IOUtils;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
+import java.util.Scanner;
 
 @Service
 public class ChatBotService {
 
     public static void chatBot(String text) {
+        //Scanner sc =  new Scanner(System.in);
         try {
-
+            //String text= sc.nextLine();
+            String botName = "test";
+            String path = getResourcesPath();
+            //MagicBooleans.trace_mode = false;
             Bot bot = new Bot(BotConfiguration.builder()
-                    .name("test")
-                    .path(getResourcesPath())
+                    .name(botName)
+                    .path(path)
                     .build());
 
+                    //new Bot(botname, path);
+
             Chat chatSession = new Chat(bot);
-
-            //String botname = "test";
-            //String path = getResourcesPath();
-            //MagicBooleans.trace_mode = false;
-            //Bot bot = new Bot(botname, path);
-
-            //chatSession = new Chat(bot);
             String textLine = "";
 
             while (true) {
@@ -34,7 +34,8 @@ public class ChatBotService {
                 textLine = text;
                 if ((textLine == null) || (textLine.length() < 1))
                     //textLine = MagicStrings.null_input;
-                    textLine ="";
+                    break;
+                    //textLine ="";
                 else {
                     String request = textLine;
                     String response = chatSession.multisentenceRespond(request);
