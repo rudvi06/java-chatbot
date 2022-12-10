@@ -26,7 +26,6 @@
 	</repositories>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>org.goldrenard</groupId>
 			<artifactId>ab</artifactId>
