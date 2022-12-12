@@ -20,9 +20,14 @@
 
 	<repositories>
 		<repository>
-			<id>mvnrepository</id>
-			<url>https://mvnrepository.com</url>
+			<id>JCenter</id>
+			<url>https://jcenter.bintray.com</url>
 		</repository>
+		<repository>
+			<id>Nexus</id>
+			<url>https://nexus.bippo.co.id/nexus/content/groups/public/</url>
+		</repository>
+
 	</repositories>
 
 	<dependencies>
