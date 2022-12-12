@@ -20,8 +20,8 @@
 
 	<repositories>
 		<repository>
-			<id>JCenter</id>
-			<url>https://jcenter.bintray.com</url>
+			<id>mvnrepository</id>
+			<url>https://mvnrepository.com</url>
 		</repository>
 	</repositories>
 
