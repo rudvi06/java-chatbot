@@ -1,7 +1,8 @@
 package com.ecommerce.mvc.services;
 
 import org.alicebot.ab.*;
-import org.alicebot.ab.configuration.BotConfiguration;
+import org.alicebot.ab.MagicBooleans;
+//import org.alicebot.ab.configuration.BotConfiguration;
 import org.alicebot.ab.utils.IOUtils;
 import org.springframework.stereotype.Service;
 
@@ -17,13 +18,10 @@ public class ChatBotService {
             //String text= sc.nextLine();
             String botName = "test";
             String path = getResourcesPath();
-            //MagicBooleans.trace_mode = false;
-            Bot bot = new Bot(BotConfiguration.builder()
-                    .name(botName)
-                    .path(path)
-                    .build());
+            MagicBooleans.trace_mode = false;
+            //Bot bot = new Bot(BotConfiguration.builder().name(botName).path(path).build());
 
-                    //new Bot(botname, path);
+            Bot bot =new Bot(botName, path);
 
             Chat chatSession = new Chat(bot);
             String textLine = "";
