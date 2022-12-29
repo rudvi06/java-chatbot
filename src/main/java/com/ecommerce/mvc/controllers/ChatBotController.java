@@ -1,5 +1,7 @@
 package com.ecommerce.mvc.controllers;
 
+import com.ecommerce.mvc.services.ChatBotService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.MultiValueMap;
@@ -14,6 +16,9 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_UTF8_VALUE;
 @RequestMapping(value = "/chat")
 public class ChatBotController {
 
+    @Autowired
+    private ChatBotService chatBotService;
+
     @GetMapping("")
     public String home(){
         return "chat";
@@ -22,8 +27,10 @@ public class ChatBotController {
     @PostMapping(value = "" , consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
     @ResponseBody
     public String home(@RequestParam Map<String,String> text){
-        System.out.println(text.get("messageText"));
-        return text.get("messageText");
+        String response = text.get("messageText");
+        System.out.println(response);
+        response = chatBotService.chatBot(response);
+        return response;
     }
 
 }

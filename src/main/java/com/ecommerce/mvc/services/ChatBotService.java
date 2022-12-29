@@ -1,6 +1,6 @@
 package com.ecommerce.mvc.services;
 
-//import org.alicebot.ab.*;
+import org.alicebot.ab.*;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -9,14 +9,14 @@ import java.io.File;
 public class ChatBotService {
 
     public String chatBot(String text){
-        String botName="test";
+        String botName="super";
         String path=getResourcesPath();
-        //Bot bot = new Bot(botName,path);
-        //Chat chatSession = new Chat(bot);
+        Bot bot = new Bot(botName,path);
+        Chat chatSession = new Chat(bot);
         String request = text;
-        //String response = chatSession.multisentenceRespond(request);
-        //System.out.println(response);
-        return "response";
+        String response = chatSession.multisentenceRespond(request);
+        System.out.println(response);
+        return response;
     }
     public String getResourcesPath() {
         File currDir = new File(".");

@@ -192,19 +192,16 @@ html, body {
 </style>
 </head>
 <body>
-  <div id="center-text"><h2>ChatBox</h2></div>
+  <div id="center-text"><h2>ChatBot</h2></div>
   <div id="chat-circle" class="btn btn-raised"><div id="chat-overlay"></div><i class="material-icons">chat</i></div>
   <div class="chat-box">
     <div class="chat-box-header">
-      <span class="chat-box-help"><i data-md-tooltip="You can type your query at any given time. Type restart to start prompts."class="material-icons">help_outline</i></span>ChatBot<span class="chat-box-toggle"><i id="close" class="material-icons">close</i></span>
+      <span class="chat-box-help"><i data-md-tooltip="Close the ChatBot to restart"class="material-icons">help_outline</i></span>ChatBot<span class="chat-box-toggle"><i id="close" class="material-icons">close</i></span>
     </div>
     <div id="chatPanel" class="panel panel-info">
       <div class="panel-body fixed-panel">
         <div class="media-list">
-          <div class="media" style = "line-height: 1.4;position: relative;overflow-wrap: break-word;color:#5A5EB9;"> Hi There👋,Do You have a query?</div>
-          <div class="media" style = "line-height: 1.4;position: relative;overflow-wrap: break-word;color:#5A5EB9;"><button style="color:#5A5EB9; border: 2px solid #4145A0; border-radius:8px;" id="messageT" name="messageText" value="I would go with the prompts"> I would go with the prompts</button></div>
-          <div class="media" style = "line-height: 1.4;position: relative;overflow-wrap: break-word;color:#5A5EB9;"><button style="color:#5A5EB9; border: 2px solid #4145A0; border-radius:8px;" id="messageT" name="messageText" value="I would like to type my query"> I would like to type my query</button></div>
-
+          <div class="media" style = "line-height: 1.4;position: relative;overflow-wrap: break-word;color:#5A5EB9;"> Hi There,Ask me anything!</div>
         </div>
       </div>
     </div>
